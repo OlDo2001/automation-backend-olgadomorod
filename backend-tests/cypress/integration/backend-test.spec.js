@@ -9,7 +9,10 @@ describe('Testing auth', function(){
     })
 
     it ('Get list with all clients', function(){
-        clientHelpers.getAllClients(cy)
+        clientHelpers.getAllClientsRequest(cy)
+    })
+    it ('Create a client and delete it', function(){
+        clientHelpers.createClientRequestAndDelete(cy)
     })
 })
 
