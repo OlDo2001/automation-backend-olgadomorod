@@ -131,7 +131,7 @@ function createRoomRequestAndDelete(cy){
     cy.authenticateSession().then((response =>{
         let fakeRoom = createRandomRoom()
 
-        //Post request ro create a room
+        //Post request to create a room
         cy.request({
             method: "POST",
             url: ENDPOINT_POST_NEW_ROOM,

@@ -8,10 +8,13 @@ const ENDPOINT_GET_BILL = 'http://localhost:3000/api/bill/'
 function createRandomBillUnique(){
 
     const fakeValue = faker.random.number({min:800, max:3000})
+    //Array for paid
+    const paidArray = ["true", "false"]
+    const paid = Math.floor(Math.random()*paidArray.length)
 
     const value = {
         "value":fakeValue,
-        "paid":true
+        "paid":paid
     }
     return value   
 }
